@@ -36,7 +36,7 @@ return $strResult;
     <a href="signup.php" >&raquo; Зарегистрироваться</a>
   </div>';
    } else {
-    echo '<span class="logged-on-attr">.'hello().getCurrentUser() .'!</span>  <div class="dropdown-content">
+    echo '<span class="logged-on-attr">'.hello().getCurrentUser() .'!</span>  <div class="dropdown-content">
     <a href="proc/logout.php" >&raquo; Выйти</a>
   </div>';
    }
