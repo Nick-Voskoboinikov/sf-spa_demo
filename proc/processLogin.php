@@ -24,7 +24,11 @@ if (null !== $username && null !== $password) {
         $_SESSION['auth'] = true; 
         
         // Пишем в сессию логин пользователя
-        $_SESSION['login'] = $username; 
+        $_SESSION['login'] = $username;
+        foreach(getUsersList() as $arrProperties) {
+          if ($username === $arrProperties['login']) $_SESSION['bd'] = $arrProperties['birthday date'];
+        }
+        
 
     }else{
         $strError = 'Проверьте корректность введенных логина и пароля!';

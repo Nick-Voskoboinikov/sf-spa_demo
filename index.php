@@ -5,7 +5,7 @@ include_once('proc/module_MacGuffin_functions.php');
 function hello(){
 $h = date('G');
   if($h>=5 && $h<=11)  {
-    $strResult='Доброго утра,';
+    $strResult='Доброго утра, ';
   }  else if($h>=12 && $h<=15)  {
     $strResult='Доброго дня, ';
   }  else  {
@@ -36,8 +36,9 @@ return $strResult;
     <a href="signup.php" >&raquo; Зарегистрироваться</a>
   </div>';
    } else {
-    echo '<span class="logged-on-attr">'.hello().getCurrentUser() .'!</span>  <div class="dropdown-content">
-    <a href="proc/logout.php" >&raquo; Выйти</a>
+    echo '<span class="logged-on-attr">'.hello().getCurrentUser() .'!</span>  <div class="dropdown-content">';
+    include_once('proc/birthdayHandle.php');
+    echo '<a href="proc/logout.php" >&raquo; Выйти</a>
   </div>';
    }
 ?>
@@ -154,7 +155,7 @@ m-1933 -5 c0 -10 -10 -15 -27 -15 l-28 1 25 14 c31 18 30 18 30 0z m1820 0 c0
 <?php if(!getCurrentUser()){
    echo '<div class="warn"><span> Авторизованные пользователи получают доступ к специальным предложениям и заказу услуг онлайн</span></div>'; 
 } else {
-  echo '<div class="warn"><span>Специальное предложение и только для Вас - скидка в 5% в течение ближайших суток. До конца акции: <code id="timer"></code></span><script src="js/timer.php" ></script></div>'; 
+  echo '<div class="warn"><span>Специальное предложение и только для Вас - скидка в 3% в течение ближайших суток. До конца акции: <code id="timer"></code></span><script src="js/timer.php" ></script></div>'; 
   
 }?>
 </section>

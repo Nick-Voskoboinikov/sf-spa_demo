@@ -22,6 +22,10 @@ function updateLocalJSON($strData){
         $strResult='Пользователь с таким логином уже существует, придумайте другое имя.';
     } else {
         $arrUsers=getUsersList();
+        if($strBirthday != ''){
+          $arrBirthday=explode('-', $strBirthday);
+          $strBirthday=mktime(0, 0, 0, $arrBirthday[1], $arrBirthday[2], $arrBirthday[0]);
+        }
         $arrNewUser=array("login"=>$strUsername,"password hash"=>sha1($strPassword),"birthday date"=>$strBirthday,"role"=>"user");
         array_push($arrUsers,$arrNewUser);
         $arrUsers=array("Users" => $arrUsers ); // for the sake of beauty & standartization
@@ -38,7 +42,7 @@ $strBirthday = test_input($_POST['birthday']) ?? null;
   }
 
   if($strUsername && $strPassword ){
-    $strResult=signup ($strUsername, $strPassword, $strBirthday='');
+    $strResult=signup ($strUsername, $strPassword, $strBirthday);
   } else {
     $strResult='Поле имени и/или пароля не заполнено';
   }

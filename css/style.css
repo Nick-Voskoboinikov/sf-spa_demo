@@ -282,6 +282,9 @@ div.warn{
     color: red;
     /*animation: animate 3.5s linear infinite;*/
   }
+  div.dropdown-content > p[align=justify] {
+    color: lime;
+  }
 
  @keyframes lightsup {
     0% {
