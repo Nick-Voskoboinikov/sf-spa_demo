@@ -13,11 +13,8 @@ function test_input($data) {
 function updateLocalJSON($strData){
     $strDb='../extras/db.json';
     $strFileHandle = fopen($strDb, 'w') or die('Файл недоступен!');
-$txt = "Mickey Mouse\n";
-fwrite($myfile, $txt);
-$txt = "Minnie Mouse\n";
-fwrite($strFileHandle, $strData);
-fclose($strFileHandle);
+    fwrite($strFileHandle, $strData);
+    fclose($strFileHandle);
 }
 
   function signup ($strUsername, $strPassword, $strBirthday=''){

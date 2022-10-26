@@ -147,7 +147,7 @@ m-1933 -5 c0 -10 -10 -15 -27 -15 l-28 1 25 14 c31 18 30 18 30 0z m1820 0 c0
 <section class="services" ><h3>Наши услуги</h3>
 <p align="jstify">КОМПЛЕКСНАЯ ПРОГРАММА «ВОЛШЕБСТВО ЛОТОСА» <span class="price" >4800</span></p>
 <p align="jstify">КОМПЛЕКСНАЯ ПРОГРАММА «ПРОБУЖДЕНИЕ ЛОТОСА» <span class="price" >5000</span></p>
-<p align="jstify">КОМПЛЕКСНАЯ ПРОГРАММА "ЧАРУЮЩАЯ КЛАССИКА" <span class="price" >3840</span></p>
+<p align="jstify">КОМПЛЕКСНАЯ ПРОГРАММА «ЧАРУЮЩАЯ КЛАССИКА» <span class="price" >3840</span></p>
 <p align="jstify">КОМПЛЕКСНАЯ ПРОГРАММА «БЕЛЫЙ ЛОТОС» <span class="price" >4800</span></p>
 <p align="jstify">Месячный абонемент <span class="price" >15000</span></p>
 

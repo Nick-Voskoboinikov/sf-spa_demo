@@ -15,10 +15,6 @@ function updateTimer(time) {
  diff = future - now;
 
  if(diff>0){
-    let prices=document.querySelectorAll(\'span.price\');
-    for (elem in prices) {
-        console.log(elem.textContent);
-      }
  hours = Math.floor(diff / (1000 * 60 * 60));
  mins = Math.floor(diff / (1000 * 60));
  secs = Math.floor(diff / 1000);
@@ -40,4 +36,9 @@ if(firsttime == null){
   console.log("'.$strTimeVal.'");
 } else {
     setInterval(\'updateTimer(firsttime)\', 1000);
-}';
+}
+    let prices=document.querySelectorAll(\'span.price\');
+    
+    for (spanElem of prices) {
+        spanElem.textContent=(spanElem.textContent * 0.95);
+      }';
