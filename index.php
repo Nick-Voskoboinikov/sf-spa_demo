@@ -1,5 +1,19 @@
 <?php session_start();
 include_once('proc/module_MacGuffin_functions.php');
+
+
+function hello(){
+$h = date('G');
+  if($h>=5 && $h<=11)  {
+    $strResult='Доброго утра,';
+  }  else if($h>=12 && $h<=15)  {
+    $strResult='Доброго дня, ';
+  }  else  {
+    $strResult='Доброго вечера, ';
+  }
+
+return $strResult;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -22,7 +36,7 @@ include_once('proc/module_MacGuffin_functions.php');
     <a href="signup.php" >&raquo; Зарегистрироваться</a>
   </div>';
    } else {
-    echo '<span class="logged-on-attr">Драсьте, '.getCurrentUser() .'!</span>  <div class="dropdown-content">
+    echo '<span class="logged-on-attr">.'hello().getCurrentUser() .'!</span>  <div class="dropdown-content">
     <a href="proc/logout.php" >&raquo; Выйти</a>
   </div>';
    }
