@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    --main-active-color:#8F3A84;
+    --secondary-color:#555555;
+    --fresh-color:rgba(8,172,35,0.8);
+}
+
+body {
+    color: var(--secondary-color,#555555);
+}
+
+body.bg {
+    background-image: url('https://images.unsplash.com/photo-1601632157275-69eda297374e?ixlib=rb-4.0.3&dl=anya-osintsova-330ObuD4Siw-unsplash.jpg&q=80&fm=jpg&crop=entropy&cs=tinysrgb');
+
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: px;
+    margin-top: 20px;
+}
+
+h2.title {
+    margin-top: 10px;
+}
+
+.tip {
+    display: block;
+    font-size: small;
+    margin-bottom: 40px;
+}
+
+.formContainer {
+    background-color: rgba(128,128,128,0.9);
+    border: 10px solid rgba(8,172,35,0.2);
+    color: var(--main-active-color,#8F3A84);
+    font-weight: 700;
+    border-radius: 20px;
+    min-height: 550px;
+    padding: 20px;
+    width: 350px;
+    margin: 100px auto;
+}
+
+input[type=text], input[type=password], input[type=date] {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    height: 40px;
+    min-width: 14em;
+    padding: 0 10px;
+    outline-color: var(--fresh-color,rgba(8,172,35,0.8));
+}
+
+input[type=submit] {
+    background-color: #58b223;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 40px;
+    margin-top: 30px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.link{
+    font-size: small;
+    margin-top: 30px;
+    text-align: center;
+}
+
+a {
+    color: #58b223;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+sup {
+    color: red;
+}
+
+sup .required {
+    position: relative;
+    bottom: 5px;
+    left: 0px;
+    visibility: hidden;
+    padding: 3px;
+    background-color: #ced3d5;
+    border: 1px solid #000;
+}
+
+sup:hover .required {
+    visibility: visible;
+}
+
+.box {
+    background-color: transparent;
+    margin: 1em;
+}
+
+.box > svg g path {
+    stroke: #8F3A84;
+    stroke-width: 12;
+    stroke-dashoffset: 0;
+}
+
+div.clicked > svg > g path {
+    stroke-dasharray: 52500;
+    stroke-dashoffset: 52500;
+    animation: lightsup 3.7s linear forwards;
+}
+
+.dropdown{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    text-align: right;
+}
+
+.door {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    font-size: xx-large;
+    padding: .5em;
+    border: 3px solid var(--main-active-color,#8F3A84);
+    border-radius: .5em;
+    text-align: center;
+}
+.logged-on-attr {
+    display: inline-block;
+    height: 3em;
+    color: var(--fresh-color,rgba(8,172,35,0.8));
+    font-size: large;
+    padding: .5em;
+    text-align: center;
+}
+
+.dropdown-content{
+    display: none;
+    position: relative;
+    right: 3px;
+    padding: 5px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.dropdown-content a {
+    color: var(--main-active-color,#8F3A84);
+    padding: 15px;
+    border: 1px solid var(--secondary-color,#555555);
+}
+
+.dropdown-content a:active, .dropdown-content a:hover{
+    color: red;
+    border: 1px solid red;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.errorMsg{
+    font-size: small;
+    background-color: #ff7979;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.congratsMsg{
+    font-size: small;
+    background-color: #79ff79;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.services, .interior {
+    width: 80vw;
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    padding: 1em;
+    margin: 3em;
+    font-size: larger;
+}
+
+.services{
+    background-image: url('https://unsplash.com/photos/ZbzYDboN7fg/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODAzNTkw&force=true&w=2400');
+    background-clip: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.services p, .interior h3, .interior p {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    z-index: 3;
+    color: var(--main-active-color,#8F3A84);
+}
+
+.services p span.price{
+    float: right;
+}
+.services p span.price::after{
+ content:   "\0020\20BD";
+}
+
+.interior {
+    background-color:  #ced3d5;
+}
+
+.interior > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+  }
+
+div.photo {
+    background-color: #f1f1f1;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 10px;
+    background-clip: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.photo:nth-child(1){
+    background-image: url('https://unsplash.com/photos/PibraWHb4h8/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODA2ODMy&force=true&w=640');
+}
+
+div.photo:nth-child(2){
+    background-image: url('https://unsplash.com/photos/8IK1OrkMzMQ/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODAzNjI4&force=true&w=640');
+}
+
+div.photo:nth-child(3){
+    background-image: url('https://unsplash.com/photos/K65M3GbRYq8/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODA1OTMw&force=true&w=640');
+}
+
+div.photo:nth-child(4){
+    background-image: url('https://unsplash.com/photos/cJwl8182Mjs/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODA2OTg5&force=true&w=640');
+}
+
+div.photo:nth-child(5){
+    background-image: url('https://unsplash.com/photos/CsqHFS6ZXfM/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODA3MDEz&force=true&w=640');
+}
+
+div.warn{
+    display: block;
+    position: fixed;   
+    bottom: 0;
+    width: 73%;
+    min-height: 50px;
+    padding: .3em;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  var(--secondary-color,#555555);
+    text-align: center;
+    border-radius: 50% 50% 0 0;
+  } 
+
+  div.warn span {
+    vertical-align: bottom;
+    font-size: .9em;
+    font-family: serif;
+    color: red;
+    /*animation: animate 3.5s linear infinite;*/
+  }
+
+ @keyframes lightsup {
+    0% {
+       stroke-dashoffset: -197500;
+    }
+    100% {
+       stroke-dashoffset: 0;
+    }
+ }
+ 
+  
+ @keyframes animate{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.7;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+

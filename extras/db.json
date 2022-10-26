@@ -1,0 +1,16 @@
+{
+    "Users": {
+        "1": {
+            "login": "user",
+            "password hash": "12dea96fec20593566ab75692c9949596833adc9",
+            "birthday date": "",
+            "role": "user"
+        },
+        "2": {
+            "login": "admin",
+            "password hash": "1e8923210ec0499314a6b2b83c5b7c78bfb204d3",
+            "birthday date": "",
+            "role": "admin"
+        }
+    }
+}
