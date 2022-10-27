@@ -40,5 +40,5 @@ if(firsttime == null){
     let prices=document.querySelectorAll(\'span.price\');
     
     for (spanElem of prices) {
-        spanElem.textContent=Math.ceil(spanElem.textContent * 0.97);
+        spanElem.textContent=Math.ceil(parseInt(spanElem.textContent,10) * 0.97);
       }';
